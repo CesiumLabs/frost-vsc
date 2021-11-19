@@ -1,0 +1,45 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",  
+	"title": "Frost configuration", 
+	"type": "object",
+	"required": [
+		"srcDir",
+		"buildDir",
+		"staticDir",
+		"HTMLcompressionLevel"
+	],
+	"properties": {
+		"srcDir": {
+			"$id": "#root/srcDir",
+			"name": "Source Directory",
+			"description": "It is the source directory of the project where all the templates/pages are stored.",
+			"type": "string"
+		},
+		"buildDir": {
+			"$id": "#root/buildDir",
+			"name": "Build Directory",
+			"description": "Specifies the export directory on build.",
+		  	"type": "string"
+		},
+		"staticDir": {
+			"$id": "#root/staticDir",
+			"name": "Static Directory",
+			"description": "Directory where the static files are stored.",
+			"type": "string"
+		},
+		"HTMLcompressionLevel": {
+			"$id": "#root/HTMLcompressionLevel",
+			"name": "HTML Compression Level",
+			"description": "The amount of compression you want the build to incurr",
+		  	"type": "integer"
+		},
+		"metadataFile": {
+			"$id": "#root/metadataFile",
+			"name": "Metadata File",
+			"description": "The file wher the metadata is stored.",
+			"default": "frost.metadata.json",
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+# Test files
+.vscode-test/
+
+# Build files
+dist/
+*.vsix
+
+# Modules
+node_modules/
+package-lock.json

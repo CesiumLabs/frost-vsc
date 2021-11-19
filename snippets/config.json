@@ -1,0 +1,6 @@
+{
+    "Frost Init": {
+        "prefix": "frost:init",
+        "body": "{\n            \"srcDir\": \"source\",\n            \"buildDir\": \"build\",\n            \"staticDir\": \"static\",\n            \"HTMLcompressionLevel\": 2\n}"
+    }
+}

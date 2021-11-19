@@ -1,0 +1,92 @@
+{
+  "name": "frost-vsc",
+  "displayName": "Frost Linting Support",
+  "version": "1.0.0",
+  "description": "Linting support for frost!",
+  "main": "./dist/index.js",
+  "icon": "assets/icon.png",
+  "publisher": "scientific-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevSnowflake/frost-vsc"
+  },
+  "bugs": {
+    "url": "https://github.com/DevSnowflake/frost-vsc/issues"
+  },
+  "engines": {
+    "vscode": "^1.55.1"
+  },
+  "categories": [
+    "Themes",
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:frost.init",
+    "workspaceContains:frost.json",
+    "workspaceContains:*.frost",
+    "onLanguage:html"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "frost.init",
+        "title": "Setup basic frost initial configuration files.",
+        "category": "Frost"
+      }
+    ],
+    "languages": [
+      {
+        "id": "html",
+        "extensions": [
+          ".frost"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets/config.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/frost.json"
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": "frost.json",
+        "url": "./schemas/config.json"
+      }
+    ],
+    "grammars": [
+      {
+        "scopeName": "source.frost",
+        "injectTo": [
+          "text.html"
+        ],
+        "path": "./syntaxes/frost.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "npx tsc --project tsconfig.json"
+  },
+  "keywords": [
+    "frost"
+  ],
+  "author": "science_spot_codes",
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "typescript": "^4.3.5",
+    "vscode": "^1.1.37"
+  },
+  "__metadata": {
+    "publisherId": "scientific-dev",
+    "publisherDisplayName": "ScientificDev"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Frost",
+    "scopeName": "source.frost",
+    "injectionSelector": "L:text.html",
+    "patterns": [
+        { "include": "#frost-include" }
+    ],
+    "repository": {
+        "frost-include": {
+            "patterns": [
+                { "include": "#include" },
+                { "include": "#string" }
+            ]
+        },
+        "include": {
+            "match": "#include",
+            "name": "entity.other.attribute-name"
+        },
+        "string": {
+            "match": "\"(.*?)\"",
+            "name": "string"
+        }
+    }
+}

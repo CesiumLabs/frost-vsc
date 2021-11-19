@@ -1,0 +1,18 @@
+{
+    "Frost Element": {
+        "prefix": "frost",
+        "body": "<frost>$1</frost>"
+    },
+    "Frost Markdown": {
+        "prefix": "frost:markdown",
+        "body": "<frost markdown>$1</frost>"
+    },
+    "Frost Typescript": {
+        "prefix": "frost:typescript",
+        "body": "<frost typescript>$1</frost>"
+    },
+    "Frost Include": {
+        "prefix": "include",
+        "body": "#include \"$1\""
+    }
+}
