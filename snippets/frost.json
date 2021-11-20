@@ -11,6 +11,10 @@
         "prefix": "frost:typescript",
         "body": "<frost typescript>$1</frost>"
     },
+    "Frost Embed": {
+        "prefix": "frost:embed",
+        "body": "<frost embed>$1</frost>"
+    },
     "Frost Include": {
         "prefix": "include",
         "body": "#include \"$1\""

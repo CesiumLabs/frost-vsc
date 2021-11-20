@@ -3,22 +3,17 @@
     "scopeName": "source.frost",
     "injectionSelector": "L:text.html",
     "patterns": [
-        { "include": "#frost-include" }
-    ],
-    "repository": {
-        "frost-include": {
+        {
             "patterns": [
-                { "include": "#include" },
-                { "include": "#string" }
+                {
+                    "match": "#(include|import)",
+                    "name": "entity.other.attribute-name"
+                },
+                {
+                    "match": "\"(.*?)\"",
+                    "name": "string"
+                }
             ]
-        },
-        "include": {
-            "match": "#include",
-            "name": "entity.other.attribute-name"
-        },
-        "string": {
-            "match": "\"(.*?)\"",
-            "name": "string"
         }
-    }
+    ]
 }
